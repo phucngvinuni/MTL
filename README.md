@@ -1,18 +1,15 @@
-Here is a complete `README.md` file incorporating your installation and execution steps, along with a comprehensive overview and citation section based on the provided research paper. 
 
-***
+# FISHER: Gradient-Decoupled Hierarchical Multi-Task Learning for Fine-Grained Aquatic Species Recognition
 
-# AquaDeHi: Detached Hierarchical Multi-Task Learning for Fine-Grained Aquatic Species Recognition
+This repository contains the official implementation of **FISHER**, a novel framework designed for the fine-grained recognition of aquatic species, specifically addressing the challenges of long-tailed distributions where ultra-rare species are poorly represented. 
 
-[cite_start]This repository contains the official implementation of **AquaDeHi**, a novel framework designed for the fine-grained recognition of aquatic species, specifically addressing the challenges of long-tailed distributions where ultra-rare species are poorly represented[cite: 2, 3, 7]. 
-
-[cite_start]AquaDeHi aligns network optimization with the natural biological hierarchy of aquatic species by breaking down recognition into three interrelated sub-tasks: semantic segmentation of anatomical parts, morphological trait prediction, and species classification[cite: 8, 33]. 
+FISHER aligns network optimization with the natural biological hierarchy of aquatic species by breaking down recognition into three interrelated sub-tasks: semantic segmentation of anatomical parts, morphological trait prediction, and species classification. 
 
 ## ✨ Key Features
-* [cite_start]**Detached Hierarchical Architecture:** Enforces a unidirectional information flow (Segmentation → Traits → Species) and applies gradient detachment at task boundaries to prevent high-level classification objectives from corrupting lower-level morphological representations[cite: 9, 55, 56].
-* [cite_start]**Prototype-Based Segmentation:** Replaces conventional decoders with learnable prototypes and orthogonality regularization, enabling compact, disentangled, and interpretable delineations of subtle anatomical structures[cite: 57, 62, 175].
-* [cite_start]**Dynamic Task Balancing:** Employs homoscedastic uncertainty weighting to dynamically balance the contributions of dense tasks (segmentation) with higher-level tasks during training[cite: 58].
-* [cite_start]**High Performance:** Achieves state-of-the-art results on the large-scale Fish-Vista dataset, including 97.7% mAP for unseen trait identification and a 13.4% accuracy improvement for ultra-rare species compared to strong baselines[cite: 12, 13].
+* **Detached Hierarchical Architecture:** Enforces a unidirectional information flow (Segmentation → Traits → Species) and applies gradient detachment at task boundaries to prevent high-level classification objectives from corrupting lower-level morphological representations.
+* **Prototype-Based Segmentation:** Replaces conventional decoders with learnable prototypes and orthogonality regularization, enabling compact, disentangled, and interpretable delineations of subtle anatomical structures.
+* **Dynamic Task Balancing:** Employs homoscedastic uncertainty weighting to dynamically balance the contributions of dense tasks (segmentation) with higher-level tasks during training[cite: 58].
+* **High Performance:** Achieves state-of-the-art results on the large-scale Fish-Vista dataset, including 97.7% mAP for unseen trait identification and a 13.4% accuracy improvement for ultra-rare species compared to strong baselines.
 
 ## ⚙️ Installation
 
@@ -31,7 +28,7 @@ Here is a complete `README.md` file incorporating your installation and executio
 
 ### 1. Training (Model)
 
-To train the AquaDeHi model from scratch:
+To train the FISHER model from scratch:
 
 ```bash
 python train_detached.py
