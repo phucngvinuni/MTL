@@ -8,7 +8,7 @@ FISHER aligns network optimization with the natural biological hierarchy of aqua
 ## ✨ Key Features
 * **Detached Hierarchical Architecture:** Enforces a unidirectional information flow (Segmentation → Traits → Species) and applies gradient detachment at task boundaries to prevent high-level classification objectives from corrupting lower-level morphological representations.
 * **Prototype-Based Segmentation:** Replaces conventional decoders with learnable prototypes and orthogonality regularization, enabling compact, disentangled, and interpretable delineations of subtle anatomical structures.
-* **Dynamic Task Balancing:** Employs homoscedastic uncertainty weighting to dynamically balance the contributions of dense tasks (segmentation) with higher-level tasks during training[cite: 58].
+* **Dynamic Task Balancing:** Employs homoscedastic uncertainty weighting to dynamically balance the contributions of dense tasks (segmentation) with higher-level tasks during training.
 * **High Performance:** Achieves state-of-the-art results on the large-scale Fish-Vista dataset, including 97.7% mAP for unseen trait identification and a 13.4% accuracy improvement for ultra-rare species compared to strong baselines.
 
 ## ⚙️ Installation
