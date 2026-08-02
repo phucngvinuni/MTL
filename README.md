@@ -46,7 +46,7 @@ python evaluationdetached.py
 * **Note:** Ensure you update the `CHECKPOINT_PATH` inside `evaluationdetached.py` to point to your best saved model (e.g., `best_model.pth`) before running.
 
 ## 💾 Checkpoints
-Pre-trained model checkpoints can be found at: `[Insert Link to HuggingFace / Google Drive / Release Assets Here]`
+Pre-trained model checkpoints can be found at: `https://huggingface.co/zesse0608/FISHER`
 
 ## 📖 Citation
 If you find this code or our research helpful in your work, please cite our paper:
