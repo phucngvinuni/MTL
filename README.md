@@ -52,7 +52,15 @@ Pre-trained model checkpoints can be found at: `[Insert Link to HuggingFace / Go
 If you find this code or our research helpful in your work, please cite our paper:
 
 ```bibtex
-abc
+@misc{nguyen2026fishergradientdecoupledhierarchicalmultitask,
+      title={FISHER: Gradient-Decoupled Hierarchical Multi-Task Learning for Fine-Grained Aquatic Species Recognition}, 
+      author={Phuc H. Nguyen and Ba Hung Ngo and Mai Phuong Tran and Cuong D. Do and Van-Dinh Nguyen},
+      year={2026},
+      eprint={2607.20523},
+      archivePrefix={arXiv},
+      primaryClass={q-bio.QM},
+      url={https://arxiv.org/abs/2607.20523}, 
+}
 ```
 
 ***
