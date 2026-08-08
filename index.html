@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="FISHER: Gradient-Decoupled Hierarchical Multi-Task Learning for Fine-Grained Aquatic Species Recognition">
+  <meta name="description" content="FISHER is a hierarchical multi-task learning framework for fine-grained aquatic species recognition, achieving 97.7% mAP for unseen trait identification and 13.4% accuracy improvement for ultra-rare species on Fish-Vista.">
+  <meta name="keywords" content="multi-task learning, fine-grained recognition, aquatic species, fish recognition, hierarchical learning, gradient decoupling, prototype segmentation, long-tail distribution, Fish-Vista">
+  <meta name="author" content="<!-- TODO: Add author names -->">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="FISHER Project Page">
+  <meta property="og:title" content="FISHER: Gradient-Decoupled Hierarchical Multi-Task Learning for Fine-Grained Aquatic Species Recognition">
+  <meta property="og:description" content="FISHER is a hierarchical multi-task learning framework for fine-grained aquatic species recognition, achieving 97.7% mAP for unseen trait identification and 13.4% accuracy improvement for ultra-rare species on Fish-Vista.">
+  <meta property="og:url" content="https://phucngvinuni.github.io/FISHER/">
+  <meta property="og:image" content="https://phucngvinuni.github.io/FISHER/static/images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FISHER: Gradient-Decoupled Hierarchical Multi-Task Learning for Fine-Grained Aquatic Species Recognition">
+  <meta name="twitter:description" content="FISHER is a hierarchical multi-task learning framework for fine-grained aquatic species recognition, achieving 97.7% mAP for unseen trait identification and 13.4% accuracy improvement for ultra-rare species.">
+  <meta name="twitter:image" content="https://phucngvinuni.github.io/FISHER/static/images/social_preview.png">
+
+  <!-- Academic / Research Specific -->
+  <meta name="citation_title" content="FISHER: Gradient-Decoupled Hierarchical Multi-Task Learning for Fine-Grained Aquatic Species Recognition">
+  <!-- TODO: Add each author below -->
+  <!-- <meta name="citation_author" content="Last, First"> -->
+  <meta name="citation_publication_date" content="2025">
+
+  <meta name="theme-color" content="#2563eb">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <title>FISHER | Fine-Grained Aquatic Species Recognition</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+
+  <!-- Critical CSS -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <!-- Non-critical CSS -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "FISHER: Gradient-Decoupled Hierarchical Multi-Task Learning for Fine-Grained Aquatic Species Recognition",
+    "description": "FISHER structures species recognition around the natural biological hierarchy of aquatic organisms, achieving 97.7% mAP for unseen trait identification and 13.4% accuracy improvement for ultra-rare species on Fish-Vista.",
+    "keywords": ["multi-task learning", "fine-grained recognition", "aquatic species", "hierarchical learning", "gradient decoupling"],
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+
+  <!-- ============================================================
+       HERO / TITLE SECTION
+       ============================================================ -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+
+            <h1 class="title is-1 publication-title">
+              FISHER: Gradient-Decoupled Hierarchical Multi-Task Learning<br>
+              for Fine-Grained Aquatic Species Recognition
+            </h1>
+
+            <!-- ===== AUTHORS — fill in names & personal links ===== -->
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <!-- TODO: replace href and name -->
+                <a href="#" target="_blank">Author 1</a><sup>*,1</sup>,&nbsp;
+              </span>
+              <span class="author-block">
+                <a href="#" target="_blank">Author 2</a><sup>*,1</sup>,&nbsp;
+              </span>
+              <span class="author-block">
+                <a href="#" target="_blank">Author 3</a><sup>2</sup>
+              </span>
+            </div>
+
+            <!-- ===== AFFILIATIONS ===== -->
+            <div class="is-size-5 publication-authors">
+              <!-- TODO: replace with real institution names -->
+              <span class="author-block">
+                <sup>1</sup>VinUniversity&emsp;<sup>2</sup>Institution 2
+                <br>
+                <!-- TODO: fill in venue & year, e.g. ECCV 2025 -->
+                Conference / Journal Name, Year
+              </span>
+              <span class="eql-cntrb">
+                <small><br><sup>*</sup>Equal Contribution</small>
+              </span>
+            </div>
+
+            <!-- ===== ACTION BUTTONS ===== -->
+            <div class="column has-text-centered">
+              <div class="publication-links">
+
+                <!-- Paper PDF — update ARXIV_ID when available -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/ARXIV_ID.pdf" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- GitHub Code -->
+                <span class="link-block">
+                  <a href="https://github.com/phucngvinuni/FISHER" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- HuggingFace Model Weights -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/zesse0608/FISHER" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">&#129303;</span>
+                    <span>Model</span>
+                  </a>
+                </span>
+
+                <!-- arXiv — update when available -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/ARXIV_ID" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+              </div>
+            </div>
+
+          </div><!-- /column -->
+        </div><!-- /columns -->
+      </div><!-- /container -->
+    </div><!-- /hero-body -->
+  </section>
+
+  <!-- ============================================================
+       ABSTRACT
+       ============================================================ -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Fine-grained recognition of aquatic species is challenged by extreme long-tailed distributions,
+              where rare species are severely underrepresented. We present <strong>FISHER</strong>, a
+              gradient-decoupled hierarchical multi-task learning framework that structures species recognition
+              around the natural biological hierarchy of aquatic organisms by decomposing the task into three
+              interconnected components: <em>anatomical part segmentation</em>,
+              <em>morphological characteristic prediction</em>, and <em>species identification</em>.
+            </p>
+            <p>
+              Unlike conventional multi-task approaches, FISHER maintains strictly unidirectional information
+              flow through gradient detachment at task boundaries, preventing high-level classification
+              objectives from corrupting lower-level morphological representations. Precise delineation of
+              anatomical structures is achieved via learnable prototypes with orthogonality constraints, while
+              homoscedastic uncertainty weighting dynamically equilibrates contributions from segmentation
+              and classification tasks during training.
+            </p>
+            <p>
+              Evaluated on the Fish-Vista benchmark, FISHER achieves
+              <strong>97.7% mAP for unseen trait identification</strong> and delivers a
+              <strong>13.4% accuracy improvement for ultra-rare species</strong> over strong baselines,
+              demonstrating the effectiveness of hierarchical gradient decoupling for long-tailed
+              fine-grained recognition.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       METHOD OVERVIEW  (replace carousel images with your figures)
+       ============================================================ -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Method Overview</h2>
+
+        <!-- Image carousel — swap placeholder images with your paper figures -->
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <img src="static/images/carousel1.jpg"
+                 alt="FISHER architecture overview"
+                 style="max-height:520px;object-fit:contain;width:100%;" loading="lazy"/>
+            <h2 class="subtitle has-text-centered">
+              <!-- TODO: Replace with your figure caption -->
+              Overall FISHER architecture with gradient-decoupled hierarchical task branches.
+            </h2>
+          </div>
+          <div class="item">
+            <img src="static/images/carousel2.jpg"
+                 alt="Prototype-based segmentation module"
+                 style="max-height:520px;object-fit:contain;width:100%;" loading="lazy"/>
+            <h2 class="subtitle has-text-centered">
+              Prototype-based segmentation with orthogonality constraints for anatomical part delineation.
+            </h2>
+          </div>
+          <div class="item">
+            <img src="static/images/carousel3.jpg"
+                 alt="Qualitative results on Fish-Vista"
+                 style="max-height:520px;object-fit:contain;width:100%;" loading="lazy"/>
+            <h2 class="subtitle has-text-centered">
+              Qualitative results on the Fish-Vista dataset across common and ultra-rare species.
+            </h2>
+          </div>
+          <div class="item">
+            <img src="static/images/carousel4.jpg"
+                 alt="Performance on rare species"
+                 style="max-height:520px;object-fit:contain;width:100%;" loading="lazy"/>
+            <h2 class="subtitle has-text-centered">
+              FISHER achieves 13.4% accuracy improvement for ultra-rare species over strong baselines.
+            </h2>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       KEY RESULTS — summary table
+       ============================================================ -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Key Results</h2>
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <div class="content">
+            <table class="table is-bordered is-striped is-fullwidth has-text-centered">
+              <thead>
+                <tr>
+                  <th>Task</th>
+                  <th>Metric</th>
+                  <th>FISHER</th>
+                  <th>vs. Best Baseline</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Unseen Trait Identification</td>
+                  <td>mAP</td>
+                  <td><strong>97.7%</strong></td>
+                  <td><!-- TODO: fill in -->&mdash;</td>
+                </tr>
+                <tr>
+                  <td>Ultra-Rare Species Classification</td>
+                  <td>Accuracy</td>
+                  <td><strong>+13.4%</strong></td>
+                  <td>vs. strong baselines</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="has-text-centered">
+              Evaluated on the <strong>Fish-Vista</strong> dataset.
+              <!-- TODO: Add more metrics from your paper -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       VIDEO PRESENTATION (remove section if no video)
+       ============================================================ -->
+  <!--
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Video Presentation</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID"
+                      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- ============================================================
+       BIBTEX
+       ============================================================ -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <!-- TODO: Fill in author names, venue, year, and arXiv ID when available -->
+      <pre id="bibtex-code"><code>@article{FISHER2025,
+  title     = {FISHER: Gradient-Decoupled Hierarchical Multi-Task Learning
+               for Fine-Grained Aquatic Species Recognition},
+  author    = {Author1 and Author2 and Author3},
+  journal   = {Conference/Journal Name},
+  year      = {2025},
+  url       = {https://phucngvinuni.github.io/FISHER/}
+}</code></pre>
+    </div>
+  </section>
+
+  </main><!-- /main-content -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <p>
+              This page was built using the
+              <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+              Licensed under a
+              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+                Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
