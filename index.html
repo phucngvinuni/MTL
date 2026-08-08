@@ -4,55 +4,47 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Primary Meta Tags -->
   <meta name="title" content="FISHER: Gradient-Decoupled Hierarchical Multi-Task Learning for Fine-Grained Aquatic Species Recognition">
-  <meta name="description" content="FISHER is a hierarchical multi-task learning framework for fine-grained aquatic species recognition, achieving 97.7% mAP for unseen trait identification and 13.4% accuracy improvement for ultra-rare species on Fish-Vista.">
-  <meta name="keywords" content="multi-task learning, fine-grained recognition, aquatic species, fish recognition, hierarchical learning, gradient decoupling, prototype segmentation, long-tail distribution, Fish-Vista">
-  <meta name="author" content="<!-- TODO: Add author names -->">
+  <meta name="description" content="FISHER is a gradient-decoupled hierarchical multi-task learning framework for fine-grained aquatic species recognition, achieving 97.7% mAP for trait identification on unseen species and 13.4% accuracy improvement for ultra-rare species on Fish-Vista.">
+  <meta name="keywords" content="aquatic species recognition, fine-grained classification, gradient detachment, hierarchical multi-task learning, prototype learning, semantic segmentation, long-tailed distribution, Fish-Vista, multi-task learning">
+  <meta name="author" content="Phuc H. Nguyen, Ba Hung Ngo, Mai Phuong Tran, Cuong D. Do, Van-Dinh Nguyen">
   <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
 
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="FISHER Project Page">
   <meta property="og:title" content="FISHER: Gradient-Decoupled Hierarchical Multi-Task Learning for Fine-Grained Aquatic Species Recognition">
-  <meta property="og:description" content="FISHER is a hierarchical multi-task learning framework for fine-grained aquatic species recognition, achieving 97.7% mAP for unseen trait identification and 13.4% accuracy improvement for ultra-rare species on Fish-Vista.">
+  <meta property="og:description" content="FISHER achieves 97.7% mAP for trait identification on unseen species and 13.4% accuracy improvement for ultra-rare species on Fish-Vista.">
   <meta property="og:url" content="https://phucngvinuni.github.io/FISHER/">
-  <meta property="og:image" content="https://phucngvinuni.github.io/FISHER/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta property="og:image" content="https://phucngvinuni.github.io/FISHER/static/images/fig_framework.png">
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="FISHER: Gradient-Decoupled Hierarchical Multi-Task Learning for Fine-Grained Aquatic Species Recognition">
-  <meta name="twitter:description" content="FISHER is a hierarchical multi-task learning framework for fine-grained aquatic species recognition, achieving 97.7% mAP for unseen trait identification and 13.4% accuracy improvement for ultra-rare species.">
-  <meta name="twitter:image" content="https://phucngvinuni.github.io/FISHER/static/images/social_preview.png">
+  <meta name="twitter:description" content="FISHER achieves 97.7% mAP for trait identification on unseen species and 13.4% accuracy improvement for ultra-rare species on Fish-Vista.">
+  <meta name="twitter:image" content="https://phucngvinuni.github.io/FISHER/static/images/fig_framework.png">
 
-  <!-- Academic / Research Specific -->
   <meta name="citation_title" content="FISHER: Gradient-Decoupled Hierarchical Multi-Task Learning for Fine-Grained Aquatic Species Recognition">
-  <!-- TODO: Add each author below -->
-  <!-- <meta name="citation_author" content="Last, First"> -->
+  <meta name="citation_author" content="Nguyen, Phuc H.">
+  <meta name="citation_author" content="Ngo, Ba Hung">
+  <meta name="citation_author" content="Tran, Mai Phuong">
+  <meta name="citation_author" content="Do, Cuong D.">
+  <meta name="citation_author" content="Nguyen, Van-Dinh">
   <meta name="citation_publication_date" content="2025">
+  <meta name="citation_journal_title" content="IEEE Transactions on Circuits and Systems for Video Technology">
 
-  <meta name="theme-color" content="#2563eb">
+  <meta name="theme-color" content="#1a73e8">
 
-  <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://ajax.googleapis.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
-  <title>FISHER | Fine-Grained Aquatic Species Recognition</title>
+  <title>FISHER | Hierarchical MTL for Aquatic Species Recognition</title>
 
-  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link rel="apple-touch-icon" href="static/images/favicon.ico">
 
-  <!-- Critical CSS -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-
-  <!-- Non-critical CSS -->
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -61,7 +53,7 @@
     <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
   </noscript>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -72,31 +64,66 @@
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
 
-  <!-- Structured Data -->
+  <style>
+    .tag-pill {
+      display: inline-block;
+      background: #e8f0fe;
+      color: #1a73e8;
+      border-radius: 999px;
+      padding: 3px 12px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin: 2px;
+    }
+    .result-highlight {
+      background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+      border-left: 4px solid #43a047;
+      border-radius: 6px;
+      padding: 14px 20px;
+      margin: 8px 0;
+    }
+    .result-highlight .number { font-size: 2rem; font-weight: 800; color: #2e7d32; }
+    .result-highlight .label { font-size: 0.9rem; color: #555; }
+    .results-grid { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 24px 0; }
+    .author-card { text-align: center; padding: 10px; }
+    .author-card img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #e0e0e0; }
+    .author-card .name { font-weight: 600; font-size: 0.9rem; margin-top: 6px; }
+    .author-card .affil { font-size: 0.78rem; color: #666; }
+    .authors-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin: 20px 0; }
+    .section-fig img { width: 100%; border-radius: 8px; box-shadow: 0 2px 16px rgba(0,0,0,0.10); }
+    .fig-caption { text-align: center; font-size: 0.9rem; color: #555; margin-top: 8px; font-style: italic; }
+    table.results-table { font-size: 0.88rem; }
+    table.results-table th { background: #f5f5f5; }
+    table.results-table .best { background: #bbdefb; font-weight: 700; }
+    table.results-table .ours { background: #e8f5e9; font-weight: 700; }
+  </style>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
     "headline": "FISHER: Gradient-Decoupled Hierarchical Multi-Task Learning for Fine-Grained Aquatic Species Recognition",
-    "description": "FISHER structures species recognition around the natural biological hierarchy of aquatic organisms, achieving 97.7% mAP for unseen trait identification and 13.4% accuracy improvement for ultra-rare species on Fish-Vista.",
-    "keywords": ["multi-task learning", "fine-grained recognition", "aquatic species", "hierarchical learning", "gradient decoupling"],
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/"
+    "author": [
+      {"@type": "Person", "name": "Phuc H. Nguyen", "affiliation": {"@type": "Organization", "name": "VinUniversity"}},
+      {"@type": "Person", "name": "Ba Hung Ngo", "affiliation": {"@type": "Organization", "name": "Chonnam National University"}},
+      {"@type": "Person", "name": "Mai Phuong Tran", "affiliation": {"@type": "Organization", "name": "VinUniversity"}},
+      {"@type": "Person", "name": "Cuong D. Do", "affiliation": {"@type": "Organization", "name": "VinUniversity"}},
+      {"@type": "Person", "name": "Van-Dinh Nguyen", "affiliation": {"@type": "Organization", "name": "Trinity College Dublin"}}
+    ],
+    "keywords": ["multi-task learning", "fine-grained recognition", "aquatic species", "hierarchical learning", "gradient decoupling", "prototype segmentation"],
+    "isAccessibleForFree": true
   }
   </script>
 </head>
 <body>
 
-  <!-- Scroll to Top Button -->
   <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
     <i class="fas fa-chevron-up"></i>
   </button>
 
   <main id="main-content">
 
-  <!-- ============================================================
-       HERO / TITLE SECTION
-       ============================================================ -->
+  <!-- ============================================================ HERO -->
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
@@ -104,52 +131,51 @@
           <div class="column has-text-centered">
 
             <h1 class="title is-1 publication-title">
-              FISHER: Gradient-Decoupled Hierarchical Multi-Task Learning<br>
+              FISHER: Gradient-Decoupled Hierarchical Multi-Task Learning
               for Fine-Grained Aquatic Species Recognition
             </h1>
 
-            <!-- ===== AUTHORS — fill in names & personal links ===== -->
-            <div class="is-size-5 publication-authors">
+            <div style="margin: 10px 0;">
+              <span class="tag-pill">IEEE TCSVT (Under Review)</span>
+              <span class="tag-pill">Multi-Task Learning</span>
+              <span class="tag-pill">Fine-Grained Recognition</span>
+              <span class="tag-pill">Fish-Vista</span>
+            </div>
+
+            <!-- AUTHORS -->
+            <div class="is-size-5 publication-authors" style="margin-top:16px;">
               <span class="author-block">
-                <!-- TODO: replace href and name -->
-                <a href="#" target="_blank">Author 1</a><sup>*,1</sup>,&nbsp;
+                <a href="https://github.com/phucngvinuni" target="_blank">Phuc H. Nguyen</a><sup>*,1</sup>,&nbsp;
               </span>
               <span class="author-block">
-                <a href="#" target="_blank">Author 2</a><sup>*,1</sup>,&nbsp;
+                <a href="#" target="_blank">Ba Hung Ngo</a><sup>*,2,1</sup>,&nbsp;
               </span>
               <span class="author-block">
-                <a href="#" target="_blank">Author 3</a><sup>2</sup>
+                <a href="#" target="_blank">Mai Phuong Tran</a><sup>1</sup>,&nbsp;
+              </span>
+              <span class="author-block">
+                <a href="#" target="_blank">Cuong D. Do</a><sup>1</sup>,&nbsp;
+              </span>
+              <span class="author-block">
+                <a href="#" target="_blank">Van-Dinh Nguyen</a><sup>3</sup>
               </span>
             </div>
 
-            <!-- ===== AFFILIATIONS ===== -->
             <div class="is-size-5 publication-authors">
-              <!-- TODO: replace with real institution names -->
               <span class="author-block">
-                <sup>1</sup>VinUniversity&emsp;<sup>2</sup>Institution 2
-                <br>
-                <!-- TODO: fill in venue & year, e.g. ECCV 2025 -->
-                Conference / Journal Name, Year
+                <sup>1</sup>VinUniversity, Vietnam &emsp;
+                <sup>2</sup>Chonnam National University, South Korea &emsp;
+                <sup>3</sup>Trinity College Dublin, Ireland
               </span>
               <span class="eql-cntrb">
-                <small><br><sup>*</sup>Equal Contribution</small>
+                <small><br><sup>*</sup>Equal Contribution &emsp; ✉ Corresponding: dinh.nguyen@tcd.ie</small>
               </span>
             </div>
 
-            <!-- ===== ACTION BUTTONS ===== -->
+            <!-- BUTTONS -->
             <div class="column has-text-centered">
               <div class="publication-links">
 
-                <!-- Paper PDF — update ARXIV_ID when available -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/pdf/ARXIV_ID.pdf" target="_blank"
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                    <span>Paper</span>
-                  </a>
-                </span>
-
-                <!-- GitHub Code -->
                 <span class="link-block">
                   <a href="https://github.com/phucngvinuni/FISHER" target="_blank"
                      class="external-link button is-normal is-rounded is-dark">
@@ -158,16 +184,15 @@
                   </a>
                 </span>
 
-                <!-- HuggingFace Model Weights -->
                 <span class="link-block">
                   <a href="https://huggingface.co/zesse0608/FISHER" target="_blank"
                      class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">&#129303;</span>
-                    <span>Model</span>
+                    <span>Model Weights</span>
                   </a>
                 </span>
 
-                <!-- arXiv — update when available -->
+                <!-- Uncomment when arXiv is available:
                 <span class="link-block">
                   <a href="https://arxiv.org/abs/ARXIV_ID" target="_blank"
                      class="external-link button is-normal is-rounded is-dark">
@@ -175,19 +200,32 @@
                     <span>arXiv</span>
                   </a>
                 </span>
+                -->
 
               </div>
             </div>
 
-          </div><!-- /column -->
-        </div><!-- /columns -->
-      </div><!-- /container -->
-    </div><!-- /hero-body -->
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- ============================================================
-       ABSTRACT
-       ============================================================ -->
+  <!-- ============================================================ TEASER FIGURE -->
+  <section class="section" style="padding-top:0; padding-bottom:24px;">
+    <div class="container is-max-desktop section-fig">
+      <img src="static/images/fig_framework.png"
+           alt="FISHER architecture: shared backbone → segmentation → trait → species, with gradient decoupling at each boundary"
+           loading="eager"/>
+      <p class="fig-caption">
+        <strong>Fig. 1.</strong> Overview of the FISHER architecture. Features are extracted by a shared backbone and refined hierarchically
+        from segmentation to trait prediction and species classification. <span style="color:#c0392b;">Red</span> dashed lines denote
+        gradient decoupling (stop-gradient) used to mitigate negative transfer.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================ ABSTRACT -->
   <section class="section hero is-light">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
@@ -195,27 +233,27 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Fine-grained recognition of aquatic species is challenged by extreme long-tailed distributions,
-              where rare species are severely underrepresented. We present <strong>FISHER</strong>, a
-              gradient-decoupled hierarchical multi-task learning framework that structures species recognition
-              around the natural biological hierarchy of aquatic organisms by decomposing the task into three
-              interconnected components: <em>anatomical part segmentation</em>,
-              <em>morphological characteristic prediction</em>, and <em>species identification</em>.
+              Fine-grained recognition of aquatic species is challenging due to subtle morphological differences and long-tailed
+              distributions, where ultra-rare species are underrepresented. A natural solution is to jointly model segmentation,
+              morphological traits, and species classification within a multi-task learning (MTL) framework. However, existing MTL
+              methods suffer from <em>negative transfer</em> caused by gradient conflicts between low-level dense tasks and high-level
+              classification objectives, degrading fine-grained representations.
             </p>
             <p>
-              Unlike conventional multi-task approaches, FISHER maintains strictly unidirectional information
-              flow through gradient detachment at task boundaries, preventing high-level classification
-              objectives from corrupting lower-level morphological representations. Precise delineation of
-              anatomical structures is achieved via learnable prototypes with orthogonality constraints, while
-              homoscedastic uncertainty weighting dynamically equilibrates contributions from segmentation
-              and classification tasks during training.
+              To address this, we identify gradient interference across hierarchical tasks as a fundamental bottleneck and propose
+              <strong>FISHER</strong> (<strong>F</strong>ine-grained <strong>I</strong>ntegrated <strong>S</strong>egmentation and
+              <strong>H</strong>ierarchical L<strong>e</strong>arning for <strong>R</strong>ecognition), a gradient-decoupled
+              hierarchical MTL framework. FISHER aligns optimization with the biological hierarchy of aquatic species by enforcing a
+              unidirectional information flow — segmentation → trait prediction → species classification — while explicitly decoupling
+              gradients across task boundaries. This prevents high-level objectives from corrupting low-level morphological
+              representations, effectively mitigating negative transfer while preserving the benefits of shared supervision.
             </p>
             <p>
-              Evaluated on the Fish-Vista benchmark, FISHER achieves
-              <strong>97.7% mAP for unseen trait identification</strong> and delivers a
-              <strong>13.4% accuracy improvement for ultra-rare species</strong> over strong baselines,
-              demonstrating the effectiveness of hierarchical gradient decoupling for long-tailed
-              fine-grained recognition.
+              Furthermore, we introduce a <strong>prototype-based segmentation head</strong> with orthogonality regularization to
+              encourage disentangled anatomical representations, and employ <strong>homoscedastic uncertainty weighting</strong> to
+              dynamically balance task contributions during training. Extensive experiments on the Fish-Vista benchmark demonstrate that
+              FISHER achieves <strong>97.7% mAP</strong> for trait identification on unseen species and improves ultra-rare species
+              classification accuracy by <strong>13.4%</strong> over strong baselines.
             </p>
           </div>
         </div>
@@ -223,91 +261,162 @@
     </div>
   </section>
 
-  <!-- ============================================================
-       METHOD OVERVIEW  (replace carousel images with your figures)
-       ============================================================ -->
-  <section class="hero is-small">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Method Overview</h2>
-
-        <!-- Image carousel — swap placeholder images with your paper figures -->
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item">
-            <img src="static/images/carousel1.jpg"
-                 alt="FISHER architecture overview"
-                 style="max-height:520px;object-fit:contain;width:100%;" loading="lazy"/>
-            <h2 class="subtitle has-text-centered">
-              <!-- TODO: Replace with your figure caption -->
-              Overall FISHER architecture with gradient-decoupled hierarchical task branches.
-            </h2>
-          </div>
-          <div class="item">
-            <img src="static/images/carousel2.jpg"
-                 alt="Prototype-based segmentation module"
-                 style="max-height:520px;object-fit:contain;width:100%;" loading="lazy"/>
-            <h2 class="subtitle has-text-centered">
-              Prototype-based segmentation with orthogonality constraints for anatomical part delineation.
-            </h2>
-          </div>
-          <div class="item">
-            <img src="static/images/carousel3.jpg"
-                 alt="Qualitative results on Fish-Vista"
-                 style="max-height:520px;object-fit:contain;width:100%;" loading="lazy"/>
-            <h2 class="subtitle has-text-centered">
-              Qualitative results on the Fish-Vista dataset across common and ultra-rare species.
-            </h2>
-          </div>
-          <div class="item">
-            <img src="static/images/carousel4.jpg"
-                 alt="Performance on rare species"
-                 style="max-height:520px;object-fit:contain;width:100%;" loading="lazy"/>
-            <h2 class="subtitle has-text-centered">
-              FISHER achieves 13.4% accuracy improvement for ultra-rare species over strong baselines.
-            </h2>
-          </div>
+  <!-- ============================================================ KEY NUMBERS -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Key Results on Fish-Vista</h2>
+      <div class="results-grid">
+        <div class="result-highlight" style="min-width:180px; text-align:center;">
+          <div class="number">97.7%</div>
+          <div class="label">mAP — Trait ID on Unseen Species</div>
         </div>
-
+        <div class="result-highlight" style="min-width:180px; text-align:center;">
+          <div class="number">+13.4%</div>
+          <div class="label">Accuracy — Ultra-Rare Species</div>
+        </div>
+        <div class="result-highlight" style="min-width:180px; text-align:center;">
+          <div class="number">81.4%</div>
+          <div class="label">mIoU — Anatomical Segmentation</div>
+        </div>
+        <div class="result-highlight" style="min-width:180px; text-align:center;">
+          <div class="number">60.8</div>
+          <div class="label">F1 — Species Classification</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       KEY RESULTS — summary table
-       ============================================================ -->
+  <!-- ============================================================ METHOD -->
   <section class="section hero is-light">
     <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">Key Results</h2>
-      <div class="columns is-centered">
-        <div class="column is-four-fifths">
-          <div class="content">
-            <table class="table is-bordered is-striped is-fullwidth has-text-centered">
-              <thead>
-                <tr>
-                  <th>Task</th>
-                  <th>Metric</th>
-                  <th>FISHER</th>
-                  <th>vs. Best Baseline</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Unseen Trait Identification</td>
-                  <td>mAP</td>
-                  <td><strong>97.7%</strong></td>
-                  <td><!-- TODO: fill in -->&mdash;</td>
-                </tr>
-                <tr>
-                  <td>Ultra-Rare Species Classification</td>
-                  <td>Accuracy</td>
-                  <td><strong>+13.4%</strong></td>
-                  <td>vs. strong baselines</td>
-                </tr>
-              </tbody>
-            </table>
-            <p class="has-text-centered">
-              Evaluated on the <strong>Fish-Vista</strong> dataset.
-              <!-- TODO: Add more metrics from your paper -->
+      <h2 class="title is-3 has-text-centered">Why Hierarchical Gradient Decoupling?</h2>
+
+      <div class="columns is-vcentered">
+        <div class="column">
+          <div class="section-fig">
+            <img src="static/images/fig_compare.png"
+                 alt="Parallel MTL vs FISHER hierarchical MTL"
+                 loading="lazy"/>
+            <p class="fig-caption">
+              <strong>Fig. 2.</strong> Parallel MTL (left) learns segmentation, traits, and species independently from shared features.
+              FISHER (right) models a hierarchical dependency where segmentation informs traits and traits guide classification.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-vcentered" style="margin-top:24px;">
+        <div class="column">
+          <div class="section-fig">
+            <img src="static/images/fig_grad_similarity.png"
+                 alt="Gradient cosine similarity analysis between tasks"
+                 loading="lazy"/>
+            <p class="fig-caption">
+              <strong>Fig. 3.</strong> Gradient cosine similarity between the segmentation task and the species classification task
+              throughout training. Negative values confirm destructive gradient interference — the core bottleneck FISHER addresses.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content" style="max-width:720px; margin: 24px auto 0;">
+        <h3 class="title is-5">Three design principles of FISHER</h3>
+        <ol>
+          <li>
+            <strong>Gradient Decoupling at Task Boundaries.</strong>
+            Stop-gradient operations at the segmentation→trait and trait→species interfaces prevent high-level classification
+            gradients from corrupting fine-grained anatomical features.
+          </li>
+          <li>
+            <strong>Prototype-Based Segmentation with Orthogonality.</strong>
+            Learnable class prototypes with orthogonality regularization yield compact, disentangled, and interpretable
+            representations of anatomical parts (fins, head, barbels, …).
+          </li>
+          <li>
+            <strong>Homoscedastic Uncertainty Weighting.</strong>
+            Adaptive per-task weights automatically down-weight the noisy species classification signal (dominant under
+            long-tailed distributions) and up-weight stable segmentation and trait signals.
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ QUALITATIVE RESULTS -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Qualitative Results</h2>
+
+      <!-- Image carousel -->
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <div class="item">
+          <img src="static/images/fig_qualitative.png"
+               alt="Qualitative segmentation and trait prediction on fish samples"
+               style="width:100%; object-fit:contain; max-height:480px;" loading="lazy"/>
+          <h2 class="subtitle has-text-centered">
+            Segmentation masks and trait predictions on <em>Notropis rubellus</em> — FISHER correctly delineates fine anatomical
+            structures even for ultra-rare species.
+          </h2>
+        </div>
+
+        <div class="item">
+          <img src="static/images/fig_viztrait.png"
+               alt="Trait attribution visualization"
+               style="width:100%; object-fit:contain; max-height:480px;" loading="lazy"/>
+          <h2 class="subtitle has-text-centered">
+            Trait attribution maps: FISHER highlights the discriminative morphological features (adipose fin, pelvic fin, barbels)
+            used for trait identification and species classification.
+          </h2>
+        </div>
+
+        <div class="item">
+          <img src="static/images/seg_batch_02.png"
+               alt="Batch segmentation results"
+               style="width:100%; object-fit:contain; max-height:480px;" loading="lazy"/>
+          <h2 class="subtitle has-text-centered">
+            Anatomical part segmentation results across diverse fish species, including common and ultra-rare classes.
+          </h2>
+        </div>
+
+        <div class="item">
+          <img src="static/images/fig_ultra_rare.png"
+               alt="Ultra-rare species accuracy vs model size"
+               style="width:100%; object-fit:contain; max-height:480px;" loading="lazy"/>
+          <h2 class="subtitle has-text-centered">
+            FISHER achieves the best ultra-rare species accuracy while maintaining competitive efficiency compared to larger models.
+          </h2>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ ANALYSIS -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Representation Analysis</h2>
+
+      <div class="columns">
+        <div class="column">
+          <div class="section-fig">
+            <img src="static/images/tsne_comparison_metrics.png"
+                 alt="t-SNE embedding comparison between Standard MTL and FISHER"
+                 loading="lazy"/>
+            <p class="fig-caption">
+              <strong>t-SNE embeddings.</strong> FISHER produces tighter, better-separated species clusters compared to
+              standard parallel MTL, especially for rare and ultra-rare species.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="section-fig">
+            <img src="static/images/prototype_correlation.png"
+                 alt="Prototype correlation matrix"
+                 loading="lazy"/>
+            <p class="fig-caption">
+              <strong>Prototype correlation.</strong> The orthogonality constraint enforces near-zero off-diagonal
+              correlations between anatomical part prototypes, yielding disentangled representations.
             </p>
           </div>
         </div>
@@ -315,30 +424,116 @@
     </div>
   </section>
 
-  <!-- ============================================================
-       VIDEO PRESENTATION (remove section if no video)
-       ============================================================ -->
-  <!--
-  <section class="hero is-small is-light">
-    <div class="hero-body">
-      <div class="container">
-        <h2 class="title is-3">Video Presentation</h2>
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <div class="publication-video">
-              <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID"
-                      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
+  <!-- ============================================================ RESULTS TABLES -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Quantitative Comparison</h2>
+
+      <!-- Classification Table -->
+      <h3 class="title is-5">Species Classification (Fish-Vista)</h3>
+      <div style="overflow-x:auto; margin-bottom:2rem;">
+        <table class="table is-bordered is-striped is-fullwidth results-table has-text-centered">
+          <thead>
+            <tr>
+              <th style="text-align:left;">Model</th>
+              <th>F1</th>
+              <th>Major Acc.</th>
+              <th>Neutral Acc.</th>
+              <th>Minor Acc.</th>
+              <th>Ultra-Rare Acc.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="text-align:left;">VGG-19</td><td>49.7</td><td>93.5</td><td>83.0</td><td>74.2</td><td>45.9</td></tr>
+            <tr><td style="text-align:left;">ResNeXt-50</td><td>44.4</td><td>91.4</td><td>78.3</td><td>69.8</td><td>39.1</td></tr>
+            <tr><td style="text-align:left;">Swin-B-22k</td><td>55.1</td><td>92.6</td><td>86.2</td><td>79.6</td><td>50.4</td></tr>
+            <tr><td style="text-align:left;">MaxViT-T</td><td>57.8</td><td>94.4</td><td>86.7</td><td>81.4</td><td>53.9</td></tr>
+            <tr><td style="text-align:left;">TransFG</td><td>50.3</td><td>94.5</td><td>86.6</td><td>75.5</td><td>45.3</td></tr>
+            <tr><td style="text-align:left;">MTLSwinB</td><td>57.9</td><td>95.2</td><td>89.0</td><td>85.9</td><td>60.5</td></tr>
+            <tr class="ours"><td style="text-align:left;"><strong>FISHER (Ours)</strong></td><td>57.5</td><td>94.9</td><td>89.0</td><td>84.1</td><td>61.4</td></tr>
+            <tr class="best"><td style="text-align:left;"><strong>FISHER† (Ours)</strong></td><td><strong>60.8</strong></td><td><strong>95.5</strong></td><td><strong>89.0</strong></td><td><strong>86.2</strong></td><td><strong>63.8</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Trait Table (condensed) -->
+      <h3 class="title is-5">Trait Identification on Unseen Species (OOD — mAP %)</h3>
+      <div style="overflow-x:auto; margin-bottom:2rem;">
+        <table class="table is-bordered is-striped is-fullwidth results-table has-text-centered">
+          <thead>
+            <tr><th style="text-align:left;">Model</th><th>mAP</th><th>Adipose</th><th>Pelvic</th><th>Barbel</th><th>Dorsal</th></tr>
+          </thead>
+          <tbody>
+            <tr><td style="text-align:left;">EfficientNet-v2</td><td>83.86</td><td>95.45</td><td>88.10</td><td>83.97</td><td>67.91</td></tr>
+            <tr><td style="text-align:left;">MaxViT-T</td><td>75.42</td><td>87.18</td><td>81.30</td><td>76.03</td><td>57.15</td></tr>
+            <tr><td style="text-align:left;">Q2L (Swin-22k SH)</td><td>88.41</td><td>98.61</td><td>93.06</td><td>97.30</td><td>64.65</td></tr>
+            <tr><td style="text-align:left;">MTLSwinB</td><td>92.71</td><td>98.41</td><td>99.95</td><td>95.74</td><td>76.75</td></tr>
+            <tr class="ours"><td style="text-align:left;"><strong>FISHER (Ours)</strong></td><td>94.12</td><td>99.96</td><td>99.93</td><td>95.10</td><td>81.46</td></tr>
+            <tr class="best"><td style="text-align:left;"><strong>FISHER† (Ours)</strong></td><td><strong>97.72</strong></td><td>98.62</td><td>99.95</td><td><strong>99.43</strong></td><td><strong>92.90</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Segmentation Table (condensed) -->
+      <h3 class="title is-5">Semantic Segmentation (mIoU %)</h3>
+      <div style="overflow-x:auto; margin-bottom:2rem;">
+        <table class="table is-bordered is-striped is-fullwidth results-table has-text-centered">
+          <thead>
+            <tr><th style="text-align:left;">Model</th><th>Size</th><th>mIoU</th><th>Head</th><th>Eye</th><th>Dorsal</th><th>Caudal</th><th>Barbel</th></tr>
+          </thead>
+          <tbody>
+            <tr><td style="text-align:left;">YOLOv8</td><td>320</td><td>83.1</td><td>84.5</td><td>83.1</td><td>88.0</td><td>89.6</td><td>26.7</td></tr>
+            <tr><td style="text-align:left;">Mask2Former</td><td>320</td><td>81.6</td><td>86.4</td><td>79.1</td><td>87.6</td><td>88.8</td><td>0.0</td></tr>
+            <tr><td style="text-align:left;">MTLSwinB</td><td>224</td><td>80.4</td><td>87.8</td><td>82.7</td><td>91.5</td><td>92.9</td><td>34.5</td></tr>
+            <tr class="ours"><td style="text-align:left;"><strong>FISHER† (Ours)</strong></td><td>224</td><td>79.8</td><td>88.3</td><td>83.2</td><td>91.6</td><td>92.9</td><td>32.9</td></tr>
+            <tr class="best"><td style="text-align:left;"><strong>FISHER† (Ours)</strong></td><td><strong>320</strong></td><td><strong>81.4</strong></td><td><strong>88.9</strong></td><td><strong>85.8</strong></td><td><strong>92.4</strong></td><td><strong>93.3</strong></td><td><strong>36.3</strong></td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.85rem; color:#666; margin-top:4px;">
+          FISHER† = FISHER with long-tail baseline augmentation.
+        </p>
       </div>
     </div>
   </section>
-  -->
 
-  <!-- ============================================================
-       BIBTEX
-       ============================================================ -->
+  <!-- ============================================================ AUTHORS -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Authors</h2>
+      <div class="authors-row">
+        <div class="author-card">
+          <img src="static/images/author_phuc.jpg" alt="Phuc H. Nguyen">
+          <div class="name">Phuc H. Nguyen<sup>*</sup></div>
+          <div class="affil">VinUniversity</div>
+        </div>
+        <div class="author-card">
+          <img src="static/images/author_bahung.jpg" alt="Ba Hung Ngo">
+          <div class="name">Ba Hung Ngo<sup>*</sup></div>
+          <div class="affil">Chonnam National Univ.<br>/ VinUniversity</div>
+        </div>
+        <div class="author-card">
+          <img src="static/images/author_maiphuong.png" alt="Mai Phuong Tran">
+          <div class="name">Mai Phuong Tran</div>
+          <div class="affil">VinUniversity</div>
+        </div>
+        <div class="author-card">
+          <img src="static/images/author_cuongdo.png" alt="Cuong D. Do">
+          <div class="name">Cuong D. Do</div>
+          <div class="affil">VinUniversity</div>
+        </div>
+        <div class="author-card">
+          <img src="static/images/author_vandinh.jpg" alt="Van-Dinh Nguyen">
+          <div class="name">Van-Dinh Nguyen ✉</div>
+          <div class="affil">Trinity College Dublin</div>
+        </div>
+      </div>
+      <p style="text-align:center; font-size:0.85rem; color:#666; margin-top:12px;">
+        <sup>*</sup>Equal Contribution &ensp;|&ensp; This work is sponsored by VinUniversity under VUNI.INNO.AY24-25.05.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================ BIBTEX -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <div class="bibtex-header">
@@ -348,19 +543,20 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <!-- TODO: Fill in author names, venue, year, and arXiv ID when available -->
       <pre id="bibtex-code"><code>@article{FISHER2025,
-  title     = {FISHER: Gradient-Decoupled Hierarchical Multi-Task Learning
-               for Fine-Grained Aquatic Species Recognition},
-  author    = {Author1 and Author2 and Author3},
-  journal   = {Conference/Journal Name},
-  year      = {2025},
-  url       = {https://phucngvinuni.github.io/FISHER/}
+  title   = {FISHER: Gradient-Decoupled Hierarchical Multi-Task Learning
+             for Fine-Grained Aquatic Species Recognition},
+  author  = {Nguyen, Phuc H. and Ngo, Ba Hung and Tran, Mai Phuong
+             and Do, Cuong D. and Nguyen, Van-Dinh},
+  journal = {IEEE Transactions on Circuits and Systems for Video Technology},
+  year    = {2025},
+  note    = {Under review},
+  url     = {https://phucngvinuni.github.io/FISHER/}
 }</code></pre>
     </div>
   </section>
 
-  </main><!-- /main-content -->
+  </main>
 
   <footer class="footer">
     <div class="container">
