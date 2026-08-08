@@ -136,7 +136,6 @@
             </h1>
 
             <div style="margin: 10px 0;">
-              <span class="tag-pill">IEEE TCSVT (Under Review)</span>
               <span class="tag-pill">Multi-Task Learning</span>
               <span class="tag-pill">Fine-Grained Recognition</span>
               <span class="tag-pill">Fish-Vista</span>
@@ -168,7 +167,7 @@
                 <sup>3</sup>Trinity College Dublin, Ireland
               </span>
               <span class="eql-cntrb">
-                <small><br><sup>*</sup>Equal Contribution &emsp; ✉ Corresponding: dinh.nguyen@tcd.ie</small>
+                <small><br><sup>*</sup>Equal Contribution</small>
               </span>
             </div>
 
@@ -192,15 +191,13 @@
                   </a>
                 </span>
 
-                <!-- Uncomment when arXiv is available:
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/ARXIV_ID" target="_blank"
+                  <a href="https://arxiv.org/abs/2607.20523" target="_blank"
                      class="external-link button is-normal is-rounded is-dark">
                     <span class="icon"><i class="ai ai-arxiv"></i></span>
                     <span>arXiv</span>
                   </a>
                 </span>
-                -->
 
               </div>
             </div>
@@ -450,7 +447,6 @@
             <tr><td style="text-align:left;">MaxViT-T</td><td>57.8</td><td>94.4</td><td>86.7</td><td>81.4</td><td>53.9</td></tr>
             <tr><td style="text-align:left;">TransFG</td><td>50.3</td><td>94.5</td><td>86.6</td><td>75.5</td><td>45.3</td></tr>
             <tr><td style="text-align:left;">MTLSwinB</td><td>57.9</td><td>95.2</td><td>89.0</td><td>85.9</td><td>60.5</td></tr>
-            <tr class="ours"><td style="text-align:left;"><strong>FISHER (Ours)</strong></td><td>57.5</td><td>94.9</td><td>89.0</td><td>84.1</td><td>61.4</td></tr>
             <tr class="best"><td style="text-align:left;"><strong>FISHER† (Ours)</strong></td><td><strong>60.8</strong></td><td><strong>95.5</strong></td><td><strong>89.0</strong></td><td><strong>86.2</strong></td><td><strong>63.8</strong></td></tr>
           </tbody>
         </table>
@@ -468,7 +464,6 @@
             <tr><td style="text-align:left;">MaxViT-T</td><td>75.42</td><td>87.18</td><td>81.30</td><td>76.03</td><td>57.15</td></tr>
             <tr><td style="text-align:left;">Q2L (Swin-22k SH)</td><td>88.41</td><td>98.61</td><td>93.06</td><td>97.30</td><td>64.65</td></tr>
             <tr><td style="text-align:left;">MTLSwinB</td><td>92.71</td><td>98.41</td><td>99.95</td><td>95.74</td><td>76.75</td></tr>
-            <tr class="ours"><td style="text-align:left;"><strong>FISHER (Ours)</strong></td><td>94.12</td><td>99.96</td><td>99.93</td><td>95.10</td><td>81.46</td></tr>
             <tr class="best"><td style="text-align:left;"><strong>FISHER† (Ours)</strong></td><td><strong>97.72</strong></td><td>98.62</td><td>99.95</td><td><strong>99.43</strong></td><td><strong>92.90</strong></td></tr>
           </tbody>
         </table>
@@ -496,43 +491,6 @@
     </div>
   </section>
 
-  <!-- ============================================================ AUTHORS -->
-  <section class="section hero is-light">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">Authors</h2>
-      <div class="authors-row">
-        <div class="author-card">
-          <img src="static/images/author_phuc.jpg" alt="Phuc H. Nguyen">
-          <div class="name">Phuc H. Nguyen<sup>*</sup></div>
-          <div class="affil">VinUniversity</div>
-        </div>
-        <div class="author-card">
-          <img src="static/images/author_bahung.jpg" alt="Ba Hung Ngo">
-          <div class="name">Ba Hung Ngo<sup>*</sup></div>
-          <div class="affil">Chonnam National Univ.<br>/ VinUniversity</div>
-        </div>
-        <div class="author-card">
-          <img src="static/images/author_maiphuong.png" alt="Mai Phuong Tran">
-          <div class="name">Mai Phuong Tran</div>
-          <div class="affil">VinUniversity</div>
-        </div>
-        <div class="author-card">
-          <img src="static/images/author_cuongdo.png" alt="Cuong D. Do">
-          <div class="name">Cuong D. Do</div>
-          <div class="affil">VinUniversity</div>
-        </div>
-        <div class="author-card">
-          <img src="static/images/author_vandinh.jpg" alt="Van-Dinh Nguyen">
-          <div class="name">Van-Dinh Nguyen ✉</div>
-          <div class="affil">Trinity College Dublin</div>
-        </div>
-      </div>
-      <p style="text-align:center; font-size:0.85rem; color:#666; margin-top:12px;">
-        <sup>*</sup>Equal Contribution &ensp;|&ensp; This work is sponsored by VinUniversity under VUNI.INNO.AY24-25.05.
-      </p>
-    </div>
-  </section>
-
   <!-- ============================================================ BIBTEX -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
@@ -543,15 +501,17 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{FISHER2025,
-  title   = {FISHER: Gradient-Decoupled Hierarchical Multi-Task Learning
-             for Fine-Grained Aquatic Species Recognition},
-  author  = {Nguyen, Phuc H. and Ngo, Ba Hung and Tran, Mai Phuong
-             and Do, Cuong D. and Nguyen, Van-Dinh},
-  journal = {IEEE Transactions on Circuits and Systems for Video Technology},
-  year    = {2025},
-  note    = {Under review},
-  url     = {https://phucngvinuni.github.io/FISHER/}
+      <pre id="bibtex-code"><code>@article{Nguyen2026FISHER,
+  title         = {FISHER: Gradient-Decoupled Hierarchical Multi-Task Learning
+                  for Fine-Grained Aquatic Species Recognition},
+  author        = {Nguyen, Phuc H. and Ngo, Ba Hung and Tran, Mai Phuong
+                  and Do, Cuong D. and Nguyen, Van-Dinh},
+  journal       = {arXiv preprint arXiv:2607.20523},
+  year          = {2026},
+  eprint        = {2607.20523},
+  archivePrefix = {arXiv},
+  primaryClass  = {q-bio.QM},
+  doi           = {10.48550/arXiv.2607.20523}
 }</code></pre>
     </div>
   </section>
